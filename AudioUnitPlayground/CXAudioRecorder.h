@@ -7,12 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CXAudioRecorder : NSObject
 
+@property (nonatomic, copy) void (^audioRecordCallback)(AudioBuffer audioBuffer, NSUInteger sampleRate, uint64_t timestampMs);
+
 + (instancetype)recorder;
+- (void)configSampleRate:(NSUInteger)sampleRate channelNumber:(NSUInteger)channelNumber bytesPerSample:(NSUInteger)bytesPerSample;
+- (void)startAudioRecord;
+- (void)stopAudioRecord;
 
 @end
 

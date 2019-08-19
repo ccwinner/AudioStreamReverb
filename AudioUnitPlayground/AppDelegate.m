@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+//test
+#import "CXAudioRecorder.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+        if (granted) {
+            [CXAudioRecorder recorder].audioRecordCallback = ^(AudioBuffer audioBuffer, NSUInteger sampleRate, uint64_t timestampMs) {
+                //
+            };
+            [[CXAudioRecorder recorder] configSampleRate:44100 channelNumber:2 bytesPerSample:0];
+            [[CXAudioRecorder recorder] startAudioRecord];
+        }
+    }];
     return YES;
 }
 
