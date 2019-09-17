@@ -12,6 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CXAudioRecorder : NSObject
+@property (nonatomic, assign, readonly) NSUInteger channelNumber;
+@property (nonatomic, assign, readonly) NSUInteger sampleRate;
 
 @property (nonatomic, copy) void (^audioRecordCallback)(AudioBuffer audioBuffer, NSUInteger sampleRate, uint64_t timestampMs);
 

@@ -118,6 +118,10 @@ public:
         return this->spRate;
     }
 
+    NSUInteger getChannelNumber() {
+        return this->chnlNum;
+    }
+    
     ~InAudioRecorder() {
         AudioOutputUnitStop(componentInstance);
         AudioComponentInstanceDispose(componentInstance);
@@ -193,6 +197,14 @@ static CXAudioRecorder *static_instance = nil;
     _builtinAudioRecorder = new InAudioRecorder(sampleRate, channelNumber, bytesPerSample);
 }
 
+- (NSUInteger)sampleRate {
+    return _builtinAudioRecorder->getSampleRate();
+}
+
+- (NSUInteger)channelNumber {
+    return _builtinAudioRecorder->getChannelNumber();
+}
+
 - (void)startAudioRecord {
     _builtinAudioRecorder->startAudioRecord();
 }
@@ -206,8 +218,5 @@ static CXAudioRecorder *static_instance = nil;
         delete _builtinAudioRecorder;
     }
 }
-
-//- (void)set
-
 
 @end

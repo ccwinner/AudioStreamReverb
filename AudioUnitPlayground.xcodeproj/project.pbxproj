@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		658058AA2328DAA700FA36E6 /* CXAudioProcessManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 658058A92328DAA700FA36E6 /* CXAudioProcessManager.mm */; };
+		65A9E3072328FFE900EC58A0 /* AudioUnitDescriptionFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65A9E3052328FFE900EC58A0 /* AudioUnitDescriptionFactory.mm */; };
 		65AB4780230681D0004999E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB477F230681D0004999E0 /* AppDelegate.m */; };
 		65AB4783230681D0004999E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB4782230681D0004999E0 /* ViewController.m */; };
 		65AB4786230681D0004999E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AB4784230681D0004999E0 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		658058A82328DAA700FA36E6 /* CXAudioProcessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAudioProcessManager.h; sourceTree = "<group>"; };
+		658058A92328DAA700FA36E6 /* CXAudioProcessManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAudioProcessManager.mm; sourceTree = "<group>"; };
+		65A9E3052328FFE900EC58A0 /* AudioUnitDescriptionFactory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioUnitDescriptionFactory.mm; sourceTree = "<group>"; };
+		65A9E3062328FFE900EC58A0 /* AudioUnitDescriptionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitDescriptionFactory.h; sourceTree = "<group>"; };
 		65AB477B230681D0004999E0 /* AudioUnitPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioUnitPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AB477E230681D0004999E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65AB477F230681D0004999E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +35,7 @@
 		65AB478D230681D1004999E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65AB4795230685DC004999E0 /* CXAudioRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAudioRecorder.h; sourceTree = "<group>"; };
 		65AB4796230685DC004999E0 /* CXAudioRecorder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAudioRecorder.mm; sourceTree = "<group>"; };
+		65B3873F232F894200B4BDA2 /* AudioHelperFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHelperFunctions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		658058AB2328DFD000FA36E6 /* Audio src */ = {
+			isa = PBXGroup;
+			children = (
+				65AB4795230685DC004999E0 /* CXAudioRecorder.h */,
+				65AB4796230685DC004999E0 /* CXAudioRecorder.mm */,
+				658058A82328DAA700FA36E6 /* CXAudioProcessManager.h */,
+				658058A92328DAA700FA36E6 /* CXAudioProcessManager.mm */,
+				65A9E3062328FFE900EC58A0 /* AudioUnitDescriptionFactory.h */,
+				65A9E3052328FFE900EC58A0 /* AudioUnitDescriptionFactory.mm */,
+			);
+			path = "Audio src";
+			sourceTree = "<group>";
+		};
 		65AB4772230681D0004999E0 = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +88,8 @@
 				65AB478C230681D1004999E0 /* Info.plist */,
 				65AB47942306856F004999E0 /* Support Files */,
 				65AB478D230681D1004999E0 /* main.m */,
-				65AB4795230685DC004999E0 /* CXAudioRecorder.h */,
-				65AB4796230685DC004999E0 /* CXAudioRecorder.mm */,
+				65B3873F232F894200B4BDA2 /* AudioHelperFunctions.h */,
+				658058AB2328DFD000FA36E6 /* Audio src */,
 			);
 			path = AudioUnitPlayground;
 			sourceTree = "<group>";
@@ -158,6 +178,8 @@
 				65AB4783230681D0004999E0 /* ViewController.m in Sources */,
 				65AB478E230681D1004999E0 /* main.m in Sources */,
 				65AB4780230681D0004999E0 /* AppDelegate.m in Sources */,
+				65A9E3072328FFE900EC58A0 /* AudioUnitDescriptionFactory.mm in Sources */,
+				658058AA2328DAA700FA36E6 /* CXAudioProcessManager.mm in Sources */,
 				65AB4797230685DC004999E0 /* CXAudioRecorder.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
